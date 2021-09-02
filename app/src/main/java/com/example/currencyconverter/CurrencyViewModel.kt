@@ -1,7 +1,5 @@
 package com.example.currencyconverter
 
-import android.app.Application
-import androidx.annotation.NonNull
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 

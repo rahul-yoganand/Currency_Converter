@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
             ViewModelProvider(this).get(
                 CurrencyViewModel::class.java
             )
-        mViewModel.getFactor().observe(this, Observer<Double> {
-            tvResult.text = (it.toDouble() * etDollars.text.toString().toDouble()).toString()
-        })
+            tvResult.text = (mViewModel.getFactor().value!! * etDollars.text.toString().toDouble()).toString()
 
         btnChange.setOnClickListener {
             mViewModel.setValue()
